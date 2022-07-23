@@ -1,17 +1,21 @@
 {
   "name": "type-magic",
   "version": "0.0.1",
-  "description": "TODO",
-  "keywords": [],
-  "author": "jpv",
-  "license": "UNLICENSED",
+  "description": "Typescript utility library for working with the MTG color identity system",
+  "keywords": ["magic", "magic the gathering", "mtg", "color identity", "color"],
+  "author": "Jan Philipp Vogtherr",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "start": "ts-node src/main.ts",
+    "clean": "rimraf dist/ coverage/",
     "build": "tsc",
+    "build:prod": "npm run build -- --project tsconfig.prod.json",
     "test": "jest --coverage",
     "test:watch": "npm run test -- --watchAll",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build:prod"
   },
   "devDependencies": {
     "@types/jest": "^28.1.2",
@@ -21,9 +25,11 @@
     "eslint": "^8.19.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^28.1.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
