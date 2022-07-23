@@ -1,10 +1,15 @@
 {
-  "name": "type-magic",
-  "version": "0.0.1",
-  "description": "Typescript utility library for working with the MTG color identity system",
-  "keywords": ["magic", "magic the gathering", "mtg", "color identity", "color"],
-  "author": "Jan Philipp Vogtherr",
+  "name": "@type-magic/color-identity",
+  "version": "1.0.0",
+  "description": "Typescript library for working with the Magic color identity system",
+  "keywords": ["magic", "mtg", "gathering", "color identity", "color"],
+  "author": {
+    "name": "Jan Philipp Vogtherr",
+    "email": "jp.vogtherr@gmail.com",
+    "url": "https://github.com/jpv-os"
+  },
   "license": "MIT",
+  "repository": "https://github.com/jpv-os/type-magic",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -33,5 +38,8 @@
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
