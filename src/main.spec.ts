@@ -1,7 +1,7 @@
-import {GREETING} from "./main";
+import { GREETING } from './main'
 
-describe("main", () => {
-  test("example", () => {
-    expect(GREETING).toEqual("Hello type-magic!");
-  });
-});
+describe('main', () => {
+  test('example', () => {
+    expect(GREETING).toEqual('Hello type-magic!')
+  })
+})

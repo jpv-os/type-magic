@@ -1,1 +1,1 @@
-export const GREETING = "Hello type-magic!";
+export const GREETING = 'Hello type-magic!'
