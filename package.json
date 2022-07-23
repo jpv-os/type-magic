@@ -1,0 +1,24 @@
+{
+  "name": "type-magic",
+  "version": "0.0.1",
+  "description": "TODO",
+  "keywords": [],
+  "author": "jpv",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "build": "tsc",
+    "test": "jest --coverage",
+    "test:watch": "npm run test -- --watchAll"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.2",
+    "@types/node": "^18.0.3",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  }
+}
