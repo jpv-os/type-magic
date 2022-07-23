@@ -10,7 +10,46 @@ $ npm install type-magic
 
 ## Usage
 
-TODO
+```typescript
+// Use the ColorIdentityString type
+// It's a string in the /w?u?b?r?g?/ format
+const myId: ColorIdentityString = 'wubrg'
+const myOtherId: ColorIdentityString = 'wbg'
+const myThirdId: ColorIdentityString = ''
+// const doesntCompile: ColorIdentityString = 'xyz' // Error!
+
+// Use the static ColorIdentity API to work with color identity strings
+ColorIdentity.add('wub', 'brg') // returns 'wubrg'
+ColorIdentity.contains('wubr', 'br') // returns true
+ColorIdentity.lt('u', 'ub') // returns true
+ColorIdentity.components('wub') // returns ['', 'w', 'u', 'b']
+ColorIdentity.subColorIdentities('wg') // returns ['', 'g', 'w', 'wg']
+
+// Create objects using Constructor or ColorIdentity.parse(...)
+const myObj = new ColorIdentity('wubrg') // only accepts ColorIdentityString input
+const myOtherObj = ColorIdentity.parse('wubrg') // accepts any string input and throws if invalid
+const myThirdObj = ColorIdentity.parse('invalid') // Error!
+
+// Modify and query ColorIdentity objects using the fluent interface API
+myObj
+  .subtract(ColorIdentity.FULL)
+  .add('wbg')
+  .subtract('b')
+  .subColorIdentities() // ['', 'g', 'w', 'wg']
+
+// Use the cid function for convenience:
+// It is a shortcut that accepts either 
+// - a valid color identity string
+// - or a typescript template strings array, but without strong typing
+
+// function syntax:
+const myCid = cid('wubrg')
+// const doesntCompile = cid('not a CI string') // Error!
+
+// template strings array syntax:
+const myOtherCid = cid`wubrg`
+const myThirdCid = cid`will compile but throw error`
+```
 
 ## Development
 
