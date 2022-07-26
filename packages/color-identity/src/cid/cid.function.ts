@@ -1,4 +1,4 @@
-import { ColorIdentity, ColorIdentityParseError } from './color-identity.class'
+import { ColorIdentity, ColorIdentityParseError } from '../color-identity/color-identity.class'
 
 /**
  * Parses a color identity string.

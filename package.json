@@ -1,8 +1,9 @@
 {
-  "name": "@type-magic/color-identity",
-  "version": "1.1.0",
-  "description": "Typescript library for working with the Magic color identity system",
-  "keywords": ["magic", "mtg", "gathering", "color identity", "color"],
+  "name": "@type-magic/workspace",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Workspace for developing @type-magic packages",
+  "keywords": [],
   "author": {
     "name": "Jan Philipp Vogtherr",
     "email": "jp.vogtherr@gmail.com",
@@ -10,19 +11,16 @@
   },
   "license": "MIT",
   "repository": "https://github.com/jpv-os/type-magic",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "workspaces": [
+    "packages/color-identity"
+  ],
   "scripts": {
     "clean": "rimraf dist/ coverage/",
-    "build": "tsc",
-    "build:prod": "npm run build -- --project tsconfig.prod.json",
-    "test": "jest --coverage",
-    "test:watch": "npm run test -- --watchAll",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "npm run lint -- --fix",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build:prod"
+    "lint": "eslint packages/**/*.ts",
+    "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "@types/jest": "^28.1.2",
     "@types/node": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
@@ -34,12 +32,8 @@
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^28.1.2",
-    "rimraf": "^3.0.2",
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

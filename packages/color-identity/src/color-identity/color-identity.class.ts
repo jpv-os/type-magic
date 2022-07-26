@@ -1,5 +1,5 @@
-import { COLOR_SYMBOLS } from './color-symbols.internal'
-import { ColorIdentityString } from './color-identity-string.type'
+import { COLOR_SYMBOLS } from '../internals/color-symbols.internal.const'
+import { ColorIdentityString } from '../color-identity-string/color-identity-string.type'
 
 /**
  * An error representing that an input string could not be parsed as a valid color identity string.

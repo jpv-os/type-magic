@@ -1,5 +1,5 @@
 import { cid } from './cid.function'
-import { ColorIdentity } from './color-identity.class'
+import { ColorIdentity } from '../color-identity/color-identity.class'
 
 describe('cid', () => {
   test('template syntax compiles and function creates an instance of ColorIdentity', () => {
