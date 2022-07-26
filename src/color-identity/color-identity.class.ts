@@ -49,7 +49,7 @@ export class ColorIdentity {
   }
 
   /**
-   * Accepts a string input and returns a {@link ColorIdentity}.
+   * Accepts a string input, parses it and returns a {@link ColorIdentity} if successful.
    * Otherwise, throw a {@link ColorIdentityParseError}.
    *
    * @param {string} str - The input to parse.

@@ -31,7 +31,7 @@ const myThirdId: ColorIdentityString = ''
 // const doesntCompile: ColorIdentityString = 'xyz' // Error!
 ```
 
-### Static API `ColorIdentity`
+### Static API of `ColorIdentity`
 ```typescript
 // Use the static ColorIdentity API to work with color identity strings
 ColorIdentity.add('wub', 'brg') // returns 'wubrg'
@@ -58,21 +58,27 @@ myObj
   .subColorIdentities() // ['', 'g', 'w', 'wg']
 ```
 
-### The experimental `cid` function
+### The `cid` tagged template function
 ```typescript
-// Use the cid function for convenience:
-// It is a shortcut that accepts either 
-// - a valid color identity string
-// - or a typescript template strings array, but without strong typing
-
-// function syntax:
-const myCid = cid('wubrg')
-// const doesntCompile = cid('not a CI string') // Error!
-
-// template strings array syntax:
-const myOtherCid = cid`wubrg`
+// Regular syntax
+const myCid = cid`wubrg`
+// With template interpolation
+const interpolationValue = "wu"
+const myOtherCid = cid`${interpolationValue}brg`
+// Syntax ok, but will throw an error when executed
 const myThirdCid = cid`will compile but throw error`
 ```
+
+#### What is a Tagged Template?
+A tagged template in Typescript is a template string tagged with a function.
+The template string behaves just like a regular Typescript template string.
+However, instead of the regular string interpolation, the tag function must implement how the template is supposed to be parsed.
+In short, a **tagged template is a special way to parse template strings**. 
+
+In the case of the `cid` function, it actually does nothing more than a regular template string would.
+It receives the `TemplateStringsArray` and the `args`, then joins them and calls `ColorIdentity.parse` with the input.
+The `cid` function is basically just a shortcut or syntactic sugar for calling `ColorIdentity.parse`.
+However, this can be used in very interesting ways, like for example an IDE plugin for syntax highlighting for `cid` tagged templates.
 
 ## Development
 
