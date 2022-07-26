@@ -31,7 +31,7 @@ const myThirdId: ColorIdentityString = ''
 // const doesntCompile: ColorIdentityString = 'xyz' // Error!
 ```
 
-### Static API `ColorIdentity`
+### Static API of `ColorIdentity`
 ```typescript
 // Use the static ColorIdentity API to work with color identity strings
 ColorIdentity.add('wub', 'brg') // returns 'wubrg'
