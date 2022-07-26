@@ -1,6 +1,6 @@
 {
   "name": "@type-magic/color-identity",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Typescript library for working with the Magic color identity system",
   "keywords": ["magic", "mtg", "gathering", "color identity", "color"],
   "author": {
