@@ -1,4 +1,4 @@
-import { ColorSymbols } from './color-symbols.internal'
+import { ColorSymbols } from '../internals/color-symbols.internal.type'
 
 /**
  * This type represents a color identity string.
