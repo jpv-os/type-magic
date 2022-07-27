@@ -12,11 +12,12 @@
   "license": "MIT",
   "repository": "https://github.com/jpv-os/type-magic",
   "workspaces": [
-    "packages/color-identity"
+    "packages/color-identity",
+    "packages/vscode-extension"
   ],
   "scripts": {
     "clean": "rimraf dist/ coverage/",
-    "lint": "eslint packages/**/*.ts",
+    "lint": "eslint packages --ext ts",
     "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {

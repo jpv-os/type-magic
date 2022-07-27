@@ -1,0 +1,41 @@
+{
+  "name": "type-magic-vscode-extension",
+  "displayName": "@type-magic/color-identity syntax highlighting",
+  "version": "0.0.1-alpha",
+  "private": "true",
+  "description": "@type-magic/color-identity syntax highlighting",
+  "categories": [],
+  "keywords": [],
+  "author": {
+    "name": "Jan Philipp Vogtherr",
+    "email": "jp.vogtherr@gmail.com",
+    "url": "https://github.com/jpv-os"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jpv-os/type-magic",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "inline.color-identity",
+        "path": "./syntaxes/color-identity.tmLanguage.json",
+        "injectTo": [
+          "source.ts"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.color-identity": "color-identity"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vsce:package": "mkdirp ../../dist/vscode-extension && vsce package --no-dependencies -o ../../dist/vscode-extension",
+    "vsce:publish": "vsce publish --no-dependencies"
+  },
+  "devDependencies": {
+    "mkdirp": "^1.0.4",
+    "vsce": "^2.10.0"
+  }
+}

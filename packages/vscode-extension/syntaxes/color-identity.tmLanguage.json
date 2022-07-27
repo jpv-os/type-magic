@@ -1,0 +1,71 @@
+{
+  "__COMMENT__": "Seen here: https://github.com/ForbesLindesay/vscode-sql-template-literal/blob/master/syntaxes/lit-sql.json",
+  "scopeName": "inline.color-identity",
+  "injectionSelector": "L:source -comment -string",
+  "patterns": [
+    {
+      "name": "taggedTemplates",
+      "contentName": "meta.embedded.block.color-identity",
+      "begin": "cid((`))",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.tagged-template.js"
+        },
+        "2": {
+          "name": "string.js"
+        },
+        "3": {
+          "name": "punctuation.definition.string.template.begin.js"
+        }
+      },
+      "end": "(`)",
+      "endCaptures": {
+        "0": {
+          "name": "string.js"
+        },
+        "1": {
+          "name": "punctuation.definition.string.template.end.js"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#w"
+        },
+        {
+          "include": "#u"
+        },
+        {
+          "include": "#b"
+        },
+        {
+          "include": "#r"
+        },
+        {
+          "include": "#g"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "w": {
+      "match": "w",
+      "name": "keyword.color-identity.w"
+    },
+    "u": {
+      "match": "u",
+      "name": "keyword.color-identity.u"
+    },
+    "b": {
+      "match": "b",
+      "name": "keyword.color-identity.b"
+    },
+    "r": {
+      "match": "r",
+      "name": "keyword.color-identity.r"
+    },
+    "g": {
+      "match": "g",
+      "name": "keyword.color-identity.g"
+    }
+  }
+}
