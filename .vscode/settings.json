@@ -1,0 +1,36 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.color-identity.w",
+                "settings": {
+                    "foreground": "#f9faf4"
+                }
+            },
+            {
+                "scope": "keyword.color-identity.u",
+                "settings": {
+                    "foreground": "#83aeff"
+                }
+            },
+            {
+                "scope": "keyword.color-identity.b",
+                "settings": {
+                    "foreground": "#a69f9d"
+                }
+            },
+            {
+                "scope": "keyword.color-identity.r",
+                "settings": {
+                    "foreground": "#ee7f52"
+                }
+            },
+            {
+                "scope": "keyword.color-identity.g",
+                "settings": {
+                    "foreground": "#c4eaca"
+                }
+            }
+        ]
+    }
+}
